@@ -164,17 +164,24 @@
 #define HEATER_1_PIN                MOSFET_B_PIN  // EX2
 #define HEATER_BED_PIN              MOSFET_C_PIN  // HBP
 
+#ifndef FAN0_PIN
+  #define FAN0_PIN                  MOSFET_F_PIN
+#endif
+
 #ifndef E0_AUTO_FAN_PIN
   #define E0_AUTO_FAN_PIN           MOSFET_D_PIN
-#elif !defined(FAN0_PIN)
-  #define FAN0_PIN                  MOSFET_D_PIN
+#elif !defined(FAN1_PIN)
+  #define FAN1_PIN                  MOSFET_D_PIN
 #endif
 
 #ifndef E1_AUTO_FAN_PIN
   #define E1_AUTO_FAN_PIN           MOSFET_E_PIN
-#elif !defined(FAN1_PIN)
-  #define FAN1_PIN                  MOSFET_E_PIN
+#elif !defined(FAN2_PIN)
+  #define FAN2_PIN                  MOSFET_E_PIN
 #endif
+
+
+
 
 //
 // Misc. Functions
